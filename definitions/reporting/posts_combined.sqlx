@@ -1,7 +1,7 @@
 config {
   type: "table",
   schema: "reporting",
-  tags: ["daily", “reporting”],
+  tags: ['daily', 'reporting'],
   description: "Combine both questions and answers into a single posts_all table",
   columns: {
     post_id: `A unique identifier for a post`,
@@ -10,13 +10,11 @@ config {
     title: `The title of the post`,
     body: `The content in the body of the post`
   },
-
   
   bigquery: {
     partitionBy: "date(created_at)"
   }
 }
-
 
 select
   post_id,
